@@ -1,0 +1,37 @@
+<div>
+    <h2 class="text-center text-xl">
+        Vehicle Details
+    </h2>
+    <form (ngSubmit)="calculate()">
+        <p class="flex flex-col">
+            <label for="make">Make</label>
+            <input [(ngModel)]="make" list="makes" id="make" name="make" class="border p-1 rounded-md" />
+        </p>
+        <datalist id="makes">
+            <option value="Perodua">
+            <option value="Proton">
+        </datalist>
+        <p class="flex flex-col">
+            <label for="model">Model</label>
+            <input [(ngModel)]="model" list="models" id="model" name="model" class="border p-1 rounded-md" />
+        </p>
+        <p class="flex flex-col">
+            <label for="year">Year</label>
+            <input [(ngModel)]="year" type="date" id="due-date" name="due-date" class="border p-1 rounded-md" />
+        </p>
+        <p class="flex flex-col">
+            <label for="variant">Variant</label>
+            <input [(ngModel)]="variant" type="date" id="due-date" name="due-date" class="border p-1 rounded-md" />
+        </p>
+        <p class="flex flex-col">
+            <label for="variant">Location</label>
+            <select [(ngModel)]="location" name="location" id="location">
+                <option value="USA">Peninsular</option>
+                <option value="Europe">Sabah and Sarawak</option>
+            </select>
+        </p>
+
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+            Calculate</button>
+    </form>
+</div>
